@@ -9,7 +9,7 @@ from .authhandler import AuthHandler
 
 from .endpoints.purchaseinvoices import PurchaseInvoiceMethods
 
-class BillToBoxAPI:
+class BanqupUCAPI:
 
     def __init__(self, clientId, clientSecret, demo=False):
 
@@ -36,11 +36,12 @@ class BillToBoxAPI:
         else: headers = self.headers
 
         reqUrl = '{base}/{url}'.format(base=self.baseUrl, url=url)
-
+        
         if method == 'GET':
             response = requests.get(reqUrl, params=data, headers=headers)
         elif method == 'POST':
-            if files: response = requests.post(reqUrl, data=json.dumps(data), files=files, headers=headers)
+            print(headers)
+            if files: response = requests.post(reqUrl, data=data, files=files, headers=headers)
             else: response = requests.post(reqUrl, data=json.dumps(data), headers=headers)
         elif method == 'PUT':
             response = requests.put(reqUrl, data=json.dumps(data), headers=headers)

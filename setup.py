@@ -8,7 +8,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
   name = 'python-banqup-uc-api',         
-  packages=['banqup-uc', 'banqup-uc.models', 'banqup-uc.constants', 'banqup-uc.cache', 'banqup-uc.endpoints'],
+  packages=['banqup_uc', 'banqup_uc.models', 'banqup_uc.constants', 'banqup_uc.cache', 'banqup_uc.endpoints'],
   version = '0.1.3',
   license='GPL-3.0-or-later',
   description = 'Wrapper for the BanqUP (UnifiedPost) Universal Connector API - v3',

@@ -1,7 +1,6 @@
 
 #==============[HELPER FUNCTIONS]=================#
 
-
 def getIndexWithValue(list, attribute, value):
 
     for index, obj in enumerate(list):
