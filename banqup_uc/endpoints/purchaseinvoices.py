@@ -11,14 +11,13 @@ class PurchaseInvoiceMethods(APIEndpoint):
     def upload(self, filePath):
 
         url = self.endpoint
-        data = None
+        data = { 'client_id' : self.api.enterpriseId }
 
         fileBinary = open(filePath, 'rb')
         
-        files = [('file', ('file', fileBinary, 'application/pdf'))]
-        fileHeaders = { 'Content-Type' : 'multipart/form-data' }
+        files = [('file', ('file.pdf', fileBinary, 'application/pdf'))]
 
-        status, headers, respJson = self.api.post(url, data, fileHeaders, files)
+        status, headers, respJson = self.api.post(url, data, files=files)
         
         if status != 200: return IntakeV3Response().parseError(respJson)
 

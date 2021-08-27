@@ -11,10 +11,12 @@ from .endpoints.purchaseinvoices import PurchaseInvoiceMethods
 
 class BanqupUCAPI:
 
-    def __init__(self, clientId, clientSecret, demo=False):
+    def __init__(self, clientId, clientSecret, enterpriseId, demo=False):
 
         self.clientId = clientId
         self.clientSecret = clientSecret
+        self.enterpriseId = enterpriseId
+        
         self.demo = demo
         self.headers = {
             'Accept' : 'application/json',
@@ -40,8 +42,9 @@ class BanqupUCAPI:
         if method == 'GET':
             response = requests.get(reqUrl, params=data, headers=headers)
         elif method == 'POST':
-            print(headers)
-            if files: response = requests.post(reqUrl, data=data, files=files, headers=headers)
+            if files:
+                headers.pop('Content-Type') 
+                response = requests.post(reqUrl, data=data, files=files, headers=headers)
             else: response = requests.post(reqUrl, data=json.dumps(data), headers=headers)
         elif method == 'PUT':
             response = requests.put(reqUrl, data=json.dumps(data), headers=headers)
