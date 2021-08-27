@@ -1,8 +1,8 @@
-banqup-uc/tests/
+banqup_uc/tests/
 tests/
-banqup-uc/__pycache__/
+banqup_uc/__pycache__/
 __pycache__/
-banqup-uc/cache/*
-!banqup-uc/cache/__init__.py
+banqup_uc/cache/*
+!banqup_uc/cache/__init__.py
 dist/
 Pipfile.lock
