@@ -1,0 +1,8 @@
+banqup-uc/tests/
+tests/
+banqup-uc/__pycache__/
+__pycache__/
+banqup-uc/cache/*
+!banqup-uc/cache/__init__.py
+dist/
+Pipfile.lock
