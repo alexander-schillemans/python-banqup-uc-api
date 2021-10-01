@@ -23,7 +23,7 @@ class BanqupUCAPI:
             'Content-Type' : 'application/json',
         }
 
-        self.baseUrl = config.DEMO_URL if demo else config.BASE_URL
+        self.baseUrl = config.UAT_URL if demo else config.BASE_URL
         self.cacheHandler = CacheHandler()
         self.authHandler = AuthHandler(self, self.clientId, self.clientSecret)
 
@@ -38,6 +38,8 @@ class BanqupUCAPI:
         else: headers = self.headers
 
         reqUrl = '{base}/{url}'.format(base=self.baseUrl, url=url)
+
+        print(reqUrl)
         
         if method == 'GET':
             response = requests.get(reqUrl, params=data, headers=headers)
