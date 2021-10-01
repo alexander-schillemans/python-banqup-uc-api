@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
   name = 'python-banqup-uc-api',         
   packages=['banqup_uc', 'banqup_uc.models', 'banqup_uc.constants', 'banqup_uc.cache', 'banqup_uc.endpoints'],
-  version = '0.1.3',
+  version = '0.1.0',
   license='GPL-3.0-or-later',
   description = 'Wrapper for the BanqUP (UnifiedPost) Universal Connector API - v3',
   long_description=long_description,
@@ -17,8 +17,8 @@ setup(
   author = 'Alexander Schillemans',
   author_email = 'alexander.schillemans@lhs.global',
   url = 'https://github.com/alexanderlhsglobal/python-banqup-uc-api',
-  download_url = 'https://github.com/alexanderlhsglobal/python-banqup-uc-api/archive/refs/tags/0.1.1.tar.gz',
-  keywords = ['bill-to-box', 'universal connector' 'api', 'banqup', 'unifiedpost'],
+  download_url = 'https://github.com/alexanderlhsglobal/python-banqup-uc-api/archive/refs/tags/0.1.0.tar.gz',
+  keywords = ['bill-to-box', 'universal connector' 'api', 'banqup', 'unifiedpost', 'bill to box'],
   install_requires=[
           'requests',
           'oauthlib',
