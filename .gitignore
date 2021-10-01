@@ -6,3 +6,4 @@ banqup_uc/cache/*
 !banqup_uc/cache/__init__.py
 dist/
 Pipfile.lock
+python_banqup_uc_api.egg-info/
